@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tasty and Fresh - Doces Deliciosos</title>
+	<!-- Adicione links para seus arquivos CSS e JavaScript aqui -->
+  <style>
+/* Define a fonte e tamanho da fonte globalmente */
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Define o estilo do cabeçalho */
+header {
+  background-color: #F3D250;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Define o estilo do logo */
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Define o estilo do título da página */
+h1 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Define o estilo do logotipo */
+header h1 {
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Define o estilo da navegação */
+nav {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Define o estilo do menu */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin-left: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+nav a:hover {
+  background-color: #FCD78C;
+  color: #333;
+  border-radius: 5px;
+}
+
+
+/* Define a largura máxima do conteúdo principal e adiciona algum espaço */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Define o estilo das seções */
+section {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Define o estilo de cabeçalho da seção */
+section h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+section p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+section img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+/* Define o estilo do formulário de contato */
+form {
+  margin-top: 40px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form input[type="submit"] {
+  background-color: #F3D250;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+form input[type="submit"]:hover {
+  background-color: #FCD78C;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Define o estilo do rodapé */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+#about-us {
+  background-color: #f9f9f9;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+.about-text {
+  margin-bottom: 50px;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #555;
+  text-align: center;
+}
+
+.about-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.about-image {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.product h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.product p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+
+/* Estilo para todos os botões de compra */
+.buy-button, .buy-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Estilo quando o mouse estiver sobre o botão */
+.buy-button:hover, .buy-btn:hover {
+  background-color: #3e8e41;
+}
+
+
+  </style>
+
+</head>
+<body>
+	<header>
+		<h1>Tasty and Fresh</h1>
+		<nav>
+			<ul>
+				<li><a href="#about-us">Sobre nós</a></li>
+				<li><a href="#our-products">Nossos Produtos</a></li>
+				<li><a href="#contact-us">Contato</a></li>
+			</ul>
+		</nav>
+	</header>
+	      
+    <main>
+      <section id="about-us">
+        <h2 class="about-title">Sobre nós</h2>
+        <p class="about-text">Somos uma empresa que produz doces deliciosos com ingredientes frescos e de alta qualidade. Nossa paixão é fazer os melhores doces para nossos clientes.</p>
+        <div class="about-images">
+        <img src="foto01.jpg" alt="Imagem sobre nós" class="about-image">
+        <img src="foto02.jpg" alt="Imagem sobre nós" class="about-image">
+        <img src="foto03.jpg" alt="Imagem sobre nós" class="about-image">
+        <img src="foto04.jpg" alt="Imagem sobre nós" class="about-image">
+      </div>
+    </section>
+  </main>
+        
+ 
+    <main>
+      <section id="our-products">
+        <h2>Nossos Produtos</h2>
+        <p>Confira nossa variedade de doces:</p>
+        <ul>
+          <li class="product">
+            <h3>Bolo de Chocolate</h3>
+            <p>Feito com chocolate belga de alta qualidade.</p>
+            <p>Preço: R$ 50,00</p>
+            <button class="buy-button" data-product="bolo-de-chocolate">Comprar</button>
+          </li>
+          <li class="product">
+            <h3>Torta de Limão</h3>
+            <p>Feita com limões frescos e uma massa crocante.</p>
+            <p>Preço: R$ 40,00</p>
+            <button class="buy-button" data-product="torta-de-limao">Comprar</button>
+          </li>
+          <li class="product">
+            <h3>Brigadeiro Gourmet</h3>
+            <p>Feito com chocolate belga e leite condensado caseiro.</p>
+            <p>Preço: R$ 2,00 cada ou R$ 20,00 a dúzia</p>
+            <button class="buy-button" data-product="brigadeiro-gourmet">Comprar</button>
+          </li>
+          <li class="product">
+            <h3>Brownies</h3>
+            <p>Feito com brigadeiro branco e chocolate belga</p>
+            <p>Preço: R$ 15,00</p>
+            <button class="buy-button"  data-product="Brownies">Comprar</button>
+          </li>
+        </ul>
+      </section>
+    </main>
+  
+    <section id="contact-us">
+      <h2>Entre em contato</h2>
+      <form id="contact-form">
+        <div>
+          <label for="name">Nome:</label>
+          <input type="text" id="name" name="name">
+        </div>
+        <div>
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email">
+        </div>
+        <div>
+          <label for="message">Mensagem:</label>
+          <textarea id="message" name="message"></textarea>
+        </div>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+  
+  <script>
+    // Seleciona o formulário de contato
+    const contactForm = document.querySelector('#contact-form');
+  
+    // Adiciona um evento de envio ao formulário
+    contactForm.addEventListener('submit', (event) => {
+      // Previne o comportamento padrão do formulário de enviar a página
+      event.preventDefault();
+  
+      // Seleciona os valores dos campos de formulário
+      const name = document.querySelector('#name').value;
+      const email = document.querySelector('#email').value;
+      const message = document.querySelector('#message').value;
+  
+      // Exibe uma mensagem de confirmação na página
+      const confirmation = document.createElement('p');
+      confirmation.textContent = `Obrigado por entrar em contato, ${name}! Recebemos sua mensagem e responderemos em breve.`;
+      contactForm.appendChild(confirmation);
+    });
+
+    const buyButtons = document.querySelectorAll('.buy-button');
+
+    buyButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const product = button.getAttribute('data-product');
+    alert(`Você adicionou o produto ${product} ao seu carrinho!`);
+  });
+});
+const aboutBtn = document.getElementById("about-btn");
+const aboutImg = document.querySelector(".about-img");
+const productsBtn = document.getElementById("products-btn");
+const productsImg = document.querySelector(".products-img");
+
+aboutBtn.addEventListener("click", () => {
+  aboutImg.classList.toggle("hidden");
+  aboutBtn.textContent = aboutImg.classList.contains("hidden") ? "Mostrar imagem" : "Esconder imagem";
+});
+
+productsBtn.addEventListener("click", () => {
+  productsImg.classList.toggle("hidden");
+  productsBtn.textContent = productsImg.classList.contains("hidden") ? "Mostrar imagem" : "Esconder imagem";
+});
+
+
+
+  </script>
+
+  <script>
+    const buyBtns = document.querySelectorAll('.buy-btn');
+buyBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    alert('Item adicionado ao carrinho!');
+  });
+});
+  </script>
+	
+	<footer>
+		<p>&copy; Tasty and Fresh 2023. Todos os direitos reservados.</p>
+	</footer>
+</body>
+</html>
